@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualBasic.Devices;
 
 namespace Safnet.PerfTestHarness
 {
@@ -14,7 +12,7 @@ namespace Safnet.PerfTestHarness
     {
         private readonly IEnvironmentInfo _environmentInfo;
 
-        public List<PerformanceResult> Results { get; private set; } = new List<PerformanceResult>();
+        public List<PerformanceResult> Results { get; } = new List<PerformanceResult>();
 
         public string OutputFile { get; set; }
 
@@ -92,15 +90,15 @@ namespace Safnet.PerfTestHarness
             var endTime = EndTime.ToString(timeFormat);
 
             return "Title, \{Title}" + Environment.NewLine +
-"Start Time, \{startTime}" + Environment.NewLine +
-"End Time, \{endTime}" + Environment.NewLine +
-"Executable, \{ExecutableName}" + Environment.NewLine +
-"Arguments, \{Arguments}" + Environment.NewLine +
-"OS, \{_environmentInfo.OperatingSystem}" + Environment.NewLine +
-"Physical Memory, \{MemoryToString(_environmentInfo.PhysicalMemory)}" + Environment.NewLine +
-"Virtual Memory, \{MemoryToString(_environmentInfo.VirtualMemory)}" + Environment.NewLine +
-"Processors, \{_environmentInfo.ProcessorCount}";
-                }
+                    "Start Time, \{startTime}" + Environment.NewLine +
+                    "End Time, \{endTime}" + Environment.NewLine +
+                    "Executable, \{ExecutableName}" + Environment.NewLine +
+                    "Arguments, \{Arguments}" + Environment.NewLine +
+                    "OS, \{_environmentInfo.OperatingSystem}" + Environment.NewLine +
+                    "Physical Memory, \{MemoryToString(_environmentInfo.PhysicalMemory)}" + Environment.NewLine +
+                    "Virtual Memory, \{MemoryToString(_environmentInfo.VirtualMemory)}" + Environment.NewLine +
+                    "Processors, \{_environmentInfo.ProcessorCount}";
+        }
 
         private string MemoryToString(ulong memory) => (memory / (1024 * 1024 * 1024)).ToString() + " GB";
 

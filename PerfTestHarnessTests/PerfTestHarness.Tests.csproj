@@ -60,6 +60,7 @@
     <Compile Include="ReportStringBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PerformanceResultTests.cs" />
+    <Compile Include="TestHarnessArgumentsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PerfTestHarness\PerfTestHarness.csproj">

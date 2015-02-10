@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualBasic.Devices;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
 namespace Safnet.PerfTestHarness.Tests
 {
+    [ExcludeFromCodeCoverage]
     public class FakeComputerInfo : ComputerInfo
     {
         
