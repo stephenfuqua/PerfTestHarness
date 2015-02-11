@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using Safnet.PerfTestHarness;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace PerfTestHarness
 {  
@@ -12,14 +10,6 @@ namespace PerfTestHarness
 
         static void Main(string[] args)
         {
-            //var iterations = 10;
-            ////var fileName = @"..\..\..\MongoExperiments.CS\bin\debug\MongoExperiments.cs.exe";
-            //var fileName = @"""C:\Program Files (x86)\nodejs\node.exe""";
-            ////var arguments = "";
-            //var arguments = @"..\..\..\MongoExperiments.JS\app.js";
-            //var reportName = ".\\Mongo.JS.10.html";
-            //var title = "Ten iterations with Mongo";
-
             var arguments = TestHarnessArguments.BuildFrom(args);
 
 

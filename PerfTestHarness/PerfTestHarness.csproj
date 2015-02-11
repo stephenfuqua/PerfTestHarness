@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Safnet.PerfTestHarness</RootNamespace>
-    <AssemblyName>Safnet.PerfTestHarness</AssemblyName>
+    <AssemblyName>PerfTestHarness</AssemblyName>
     <TargetFrameworkVersion>v4.5.3</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

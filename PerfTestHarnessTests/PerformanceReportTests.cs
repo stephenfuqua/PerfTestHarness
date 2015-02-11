@@ -190,7 +190,7 @@ Run Number, Exit Code, Paged Memory, Virtual Memory, Working Set, Processor Time
 1, 0, 234232342344, 7238423236, 9809811, 3
 2, 1, 23423232342, 723842234, 980809, 1
 
-Averages, , , , 234232342343, 7238423235, 9809810, 4
+Averages, , 234232342343, 7238423235, 9809810, 4
 ";
             // Mock the output file delegate
             PerformanceReport.WriteAllText = (string actualFileName, string actualContents) =>

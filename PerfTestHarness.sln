@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfTestHarness", "PerfTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfTestHarness.Tests", "PerfTestHarnessTests\PerfTestHarness.Tests.csproj", "{BCB9AEBD-F9D0-4A35-8248-84F54A4D7AC0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3F232623-618E-4D66-BA36-2B9727D11792}"
+	ProjectSection(SolutionItems) = preProject
+		MongoCS.cmd = MongoCS.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

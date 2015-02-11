@@ -16,6 +16,8 @@ namespace Safnet.PerfTestHarness
 
         public string OutputFile { get; set; }
 
+        public string OuputFileCsv {  get { return (OutputFile.EndsWith(".csv") ? OutputFile : OutputFile + ".csv"); } }
+
         public string Title { get; set; }
 
         public string ExecutableName { get; set; }
@@ -23,6 +25,7 @@ namespace Safnet.PerfTestHarness
         public string Arguments { get; set; }
 
         public DateTime StartTime { get; set; }
+
         public DateTime EndTime { get; set; }
 
         public PerformanceReport(IEnvironmentInfo info)
@@ -54,15 +57,15 @@ namespace Safnet.PerfTestHarness
                                 .AppendLine(string.Empty)
                                 .AppendLine(GenerateStatistics());
 
-            WriteAllText(OutputFile, builder.ToString());
+            WriteAllText(OuputFileCsv, builder.ToString());
         }
 
-        // Used for delegat injection in unit testing
+        // Used for delegate injection in unit testing
         public static Action<string, string> WriteAllText = File.WriteAllText;
 
         private string GenerateStatistics()
         {
-            var footer = "Averages, , , , {0}, {1}, {2}, {3}";
+            var footer = "Averages, , {0}, {1}, {2}, {3}";
 
             long iterations = Results.Count();
             var avgPaged = CalculateAverageFor(Results, x => x.PeakPagedMemory);

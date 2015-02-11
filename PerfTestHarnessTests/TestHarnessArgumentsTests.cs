@@ -195,6 +195,53 @@ namespace Safnet.PerfTestHarness.Tests
             ValidateNegativeResult(exitCalled, readCalled, consoleWriteCalled, result);
         }
 
+
+        [TestMethod]
+        public void BlankArguments()
+        {
+            var args = new[]
+            {
+                "-e",
+                "\"directory with space\\the.exe\"",
+                "-a",
+                "-i",
+                "123",
+                "-o",
+                "output",
+            };
+
+            object exitCalled = null;
+            TestHarnessArguments.Exit = (int actualExitCode) =>
+            {
+                exitCalled = new object();
+                Assert.AreEqual(TestHarnessArguments.ERROR_CODE, actualExitCode, "actualExitCode");
+            };
+            object readCalled = null;
+            TestHarnessArguments.WaitForKeyPress = () =>
+            {
+                readCalled = new object();
+                return 1;
+            };
+
+            object consoleWriteCalled = null;
+            TestHarnessArguments.WriteErrorMessage = (string actualString) =>
+            {
+                // don't evaluate actual string - not worth it.
+                consoleWriteCalled = new object();
+            };
+
+            // execute the system under test
+            var result = TestHarnessArguments.BuildFrom(args);
+
+            Assert.AreEqual(string.Empty, result.Arguments, "Arguments");
+            Assert.AreEqual("\"directory with space\\the.exe\"", result.ExecutableName, "ExecutableName");
+            Assert.AreEqual(123, result.Iterations, "Iterations");
+            Assert.AreEqual("output", result.Title, "Title");
+            Assert.AreEqual("output", result.OutputFile, "OutputFile");
+            Assert.IsTrue(result.OutputCsv, "OutputCsv");
+            Assert.IsFalse(result.OutputHtml, "OutputHtml");
+        }
+
         [TestMethod]
         public void MissingExecutableFlag()
         {
