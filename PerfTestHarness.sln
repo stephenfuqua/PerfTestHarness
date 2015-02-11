@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3F232623-618E-4D66-BA36-2B9727D11792}"
 	ProjectSection(SolutionItems) = preProject
 		MongoCS.cmd = MongoCS.cmd
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

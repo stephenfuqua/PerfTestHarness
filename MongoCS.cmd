@@ -1,9 +1,9 @@
 SET EXE=..\MongoExperiments\MongoExperiments.CS\bin\Debug\MongoExperiments.CS.exe
 SET ARGS=
-SET ITERATIONS=50
-SET TITLE="C# Mongo Experiment 50 Iterations"
+SET ITERATIONS=5
+SET TITLE="C# Mongo Experiment 5 Iterations"
 SET FORMAT=-oc
-SET OUTFILE=.\cs50
+SET OUTFILE=.\cs5
 
 .\PerfTestHarness\bin\debug\PerfTestHarness.exe -e %EXE% -a %ARGS% -i %ITERATIONS% -o %OUTFILE% -t %TITLE% %FORMAT%
 

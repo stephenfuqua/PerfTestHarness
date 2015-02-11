@@ -26,7 +26,8 @@ namespace PerfTestHarness
                 OutputFile = arguments.OutputFile,
                 ExecutableName = arguments.ExecutableName,
                 Arguments = arguments.Arguments,
-                StartTime = DateTime.Now
+                StartTime = DateTime.Now,
+                Title = arguments.Title
             };
 
             for (int i = 0; i < arguments.Iterations; i++)
