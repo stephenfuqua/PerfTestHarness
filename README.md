@@ -5,6 +5,7 @@ Uses C# 6.0. "MongoCS.cmd" is a sample script for running the application.
 
 #Sample Output
 
+<pre>
 Title, C# Mongo Experiment 5 Iterations
 Start Time, 2015-02-10 22:17
 End Time, 2015-02-10 22:17
@@ -23,3 +24,4 @@ Run Number, Exit Code, Paged Memory, Virtual Memory, Working Set, Processor Time
 4, 0, 13168640, 157351936, 20750336, 766
 
 Averages, , 13385728, 158211276, 21049344, 759
+</pre>
