@@ -1,7 +1,7 @@
 # PerfTestHarness
 A lightweight performance test harness for Windows console apps
 
-Uses C# 6.0. "MongoCS.cmd" is a sample script for running the application.
+Uses several C# 6.0 features / <a href="http://www.visualstudio.com/en-us/news/vs2015-vs.aspx">Visual Studio 2015 CTP</a>. "MongoCS.cmd" is a sample script for running the application.
 
 #Sample Output
 
